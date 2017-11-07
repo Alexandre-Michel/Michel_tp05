@@ -19,6 +19,7 @@ public class ModuleListActivity extends Activity {
         ListView listView = findViewById(R.id.listeModule);
         Cursus cursus = new Cursus();
         ArrayList<Module> arrayList = cursus.getModules();
-        //CursusAdapter cursusAdapter = new CursusAdapter();
+        CursusAdapter cursusAdapter = new CursusAdapter(this, R.layout.test, arrayList);
+        listView.setAdapter(cursusAdapter);
     }
 }

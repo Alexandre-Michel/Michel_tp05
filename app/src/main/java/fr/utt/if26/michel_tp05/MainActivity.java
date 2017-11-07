@@ -73,5 +73,17 @@ public class MainActivity extends AppCompatActivity {
         CharSequence text = "Je veux lister un module";
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+        Intent i = new Intent(MainActivity.this, ModuleListActivity.class);
+        startActivity(i);
+    }
+
+    private void BDListModule() {
+        Intent i = new Intent(MainActivity.this, BDModuleListActivity.class);
+        startActivity(i);
+    }
+
+    private void BDAddModule() {
+        Intent i = new Intent(MainActivity.this, BDModuleAddActivity.class);
+        startActivity(i);
     }
 }
